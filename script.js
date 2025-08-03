@@ -1,3 +1,5 @@
+import 'dotenv/config'; // Top of file
+
 // DOM Elements
 const recipesContainer = document.getElementById('recipesContainer');
 const searchBtn = document.getElementById('searchBtn');
@@ -14,7 +16,7 @@ const loadingOverlay = document.getElementById('loadingOverlay');
 const featuredCategories = document.querySelector('.featured-categories');
 
 // API Configuration
-const API_KEY = '686a258726064912ac16016d603b929d';
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 // State variables
