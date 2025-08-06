@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorVerse | Discover Culinary Delights</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>FlavorVerse</h1>
+                <p class="tagline">Where every recipe tells a story</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search pasta, curry, desserts...">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Find Recipes</button>
+                    </div>
+                    <div class="trending-tags">
+                        <span>Trending:</span>
+                        <button class="tag-btn" data-query="pasta">Pasta</button>
+                        <button class="tag-btn" data-query="curry">Curry</button>
+                        <button class="tag-btn" data-query="dessert">Dessert</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Gourmet food presentation">
+            </div>
+        </section>
+
+        <main id="mainPage">
+            <div id="welcomeMessage">
+                <p>Search for recipes or click on a category below to get started!</p>
+            </div>
+            
+            <div id="resultsSection" class="hidden">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Search Results</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                        <button class="filter-btn" data-filter="quick">Quick</button>
+                    </div>
+                </div>
+                <div id="recipesContainer" class="recipes-grid"></div>
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="hidden"><i class="fas fa-plus"></i> Load More</button>
+                </div>
+            </div>
+        </main>
+
+        <section class="featured-categories">
+            <h2>Explore Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-query="italian">
+                    <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb" alt="Italian">
+                    <h3>Italian</h3>
+                </div>
+                <div class="category-card" data-query="indian">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Indian">
+                    <h3>Indian</h3>
+                </div>
+                <div class="category-card" data-query="mexican">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47" alt="Mexican">
+                    <h3>Mexican</h3>
+                </div>
+                <div class="category-card" data-query="asian">
+                    <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f" alt="Asian">
+                    <h3>Asian</h3>
+                </div>
+            </div>
+        </section>
+
+        <div id="recipeDetailPage" class="hidden">
+            <div class="detail-header">
+                <button id="backBtn"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+            <div id="recipeDetailContent"></div>
+        </div>
+
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <p>Loading delicious recipes...</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
