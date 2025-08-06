@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import 'dotenv/config'; // Top of file
+
+>>>>>>> 2e3de6ade7bc56493961d70ff6836ddd338db503
 // DOM Elements
 const recipesContainer = document.getElementById('recipesContainer');
 const searchBtn = document.getElementById('searchBtn');
